@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legis Ledger - Knowledge Navigation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🗺️ Legis Ledger</h1>
+        <p class="tagline">See where science is in the funnel</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <div class="slider-container">
+                <label for="threshold">
+                    Confidence Threshold: 
+                    <strong id="threshold-value">70%</strong>
+                </label>
+                <input 
+                    type="range" 
+                    id="threshold" 
+                    min="50" 
+                    max="95" 
+                    value="70" 
+                    step="5"
+                >
+                <div class="range-labels">
+                    <span>50% (Permissive)</span>
+                    <span>95% (Very Conservative)</span>
+                </div>
+            </div>
+
+            <div class="summary">
+                Showing <strong id="visible-count">0</strong> of 
+                <strong id="total-count">0</strong> claims
+            </div>
+        </section>
+
+        <section id="claims-list" class="claims-container">
+            <p class="loading">Loading claims...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Knowledge navigation infrastructure • 
+            <a href="mailto:founder@legisledger.com">Contact</a>
+        </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

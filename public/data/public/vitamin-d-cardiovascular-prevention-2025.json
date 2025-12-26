@@ -1,0 +1,126 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScientificKnowledge",
+  "identifier": "vitamin-d-cardiovascular-prevention-2025",
+  "context": {
+    "primaryFocus": "Primary prevention of Major Adverse Cardiovascular Events (MACE) in the general population.",
+    "reasoning": "Focus limited to large-scale, long-duration (4+ years) RCTs on cardiovascular outcomes to reflect the current standard of evidence.",
+    "validityConfidence": 0.99
+  },
+  "claimBasis": [
+    {
+      "type": "meta-analysis",
+      "citation": "Manson, J. E., et al. (2019). Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease. The New England Journal of Medicine (VITAL Trial).",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1809944"
+    }
+  ],
+  "scenario": {
+    "description": "Vitamin D supplementation reduces the risk of major adverse cardiovascular events (MACE) and all-cause cardiovascular mortality in non-deficient adults.",
+    "domain": "scientific",
+    "parameters": {
+      "population": "Community-dwelling adults (men aged 50+ and women aged 55+)",
+      "intervention": "Vitamin D3 (2000 IU/day)",
+      "comparator": "Placebo",
+      "outcome": "MACE (Myocardial infarction, stroke, cardiovascular death, or coronary revascularization)",
+      "timeframe": "Median 5.3 years follow-up"
+    }
+  },
+  "conclusion": {
+    "claim": "Vitamin D supplementation provides no clinically significant benefit in reducing major adverse cardiovascular events (MACE) or all-cause cardiovascular mortality in the general population.",
+    "confidence": 0.4,
+    "confidenceInterval": [
+      0.3,
+      0.5
+    ],
+    "factuality": "False",
+    "outcome": {
+      "result": "Recent large RCTs showed no statistical difference in MACE between the supplementation and placebo groups. Any observed association is likely observational confounding."
+    }
+  },
+  "bayesianAnalysis": {
+    "prior": {
+      "confidence": 0.6,
+      "basis": "Base rate: 60% of nutrient supplements show initial positive results (observational/small trials) before large RCTs.",
+      "source": "Adapted from Fortmann et al. (2013) meta-analysis on supplements",
+      "method": "base-rate"
+    },
+    "evidence": [
+      {
+        "factor": "Primary outcome results from large, high-quality RCTs (like VITAL) showed no significant benefit for MACE or stroke, resulting in only **Weak/Anecdotal** evidence against the original hypothesis.",
+        "increases": false,
+        "posteriorAfter": 0.4,
+        "bayesFactor": 0.444,
+        "probabilityProvenance": {
+          "P_E_given_H": 0.4,
+          "P_E_given_H_reasoning": "Probability of observing a null effect in large RCTs, even if a small true effect exists (due to insufficient follow-up or effect size being too small to be meaningful).",
+          "P_E_given_not_H": 0.9,
+          "P_E_given_not_H_reasoning": "High probability of observing a null effect in large RCTs if the true effect is null (high statistical power to rule out effect).",
+          "BF": 0.444,
+          "calculation": "0.4 / 0.9 = 0.444 (for hypothesis H). The inverse is 2.25. This is categorized as **Weak/Anecdotal** (BF 1-3) against H.",
+          "evidenceGrade": "Grade A"
+        }
+      }
+    ],
+    "posterior": 0.4,
+    "howToChangeMyMind": [
+      "New large RCT (N>30,000) focused specifically on **deficient** populations shows a 20%+ reduction in MACE → confidence rises to ~0.75",
+      "Meta-analysis pooling all RCTs shows a strong signal for secondary outcomes (e.g., atrial fibrillation) → confidence for specific sub-claim rises to ~0.60"
+    ]
+  },
+  "metadata": {
+    "createdDate": "2025-11-06T12:00:00Z",
+    "lastUpdated": "2025-11-06T12:00:00Z",
+    "version": "1.2.0",
+    "author": "Legis Ledger Fact-Check Pilot",
+    "funnelPosition": "approaching-narrow",
+    "funnelJustification": "Large-scale RCTs have failed to find a positive effect, moving the claim away from the middle-funnel of uncertainty toward a consensus of 'null' or 'false'.",
+    "gitCommit": "cardio-v1.2.0-20251106",
+    "relatedClaims": [
+      {
+        "identifier": "vitamin-d-bone-health-2025",
+        "claim": "Vitamin D improves bone health and reduces fractures.",
+        "confidence": 0.9,
+        "funnelPosition": "narrow-end-canonical",
+        "note": "Established Canonical Knowledge"
+      },
+      {
+        "identifier": "vitamin-d-dementia-prevention-2025",
+        "claim": "Vitamin D supplementation to prevent dementia is uncertain.",
+        "confidence": 0.5,
+        "funnelPosition": "middle-funnel",
+        "note": "Uncertainty (RCT evidence is mixed/insufficient)"
+      },
+      {
+        "identifier": "vitamin-d-cardiovascular-prevention-2025",
+        "claim": "Vitamin D reduces cardiovascular risk and mortality.",
+        "confidence": 0.4,
+        "funnelPosition": "approaching-narrow",
+        "note": "Current Abstract (Consensus of Null/False)"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "meta-analysis",
+      "citation": "Manson, J. E., et al. (2019). Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease. The New England Journal of Medicine (VITAL Trial).",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1809944"
+    }
+  ],
+  "disclaimer": {
+    "nature": "educational",
+    "domainSpecific": {
+      "notMedicalAdvice": true
+    },
+    "provenanceAndLimitations": {
+      "submittedBy": "Independent educational project",
+      "notSubmittedByAuthority": "NOT submitted by FDA or NIH",
+      "potentialBiases": [
+        "Analysis may be biased toward published consensus of null effect"
+      ],
+      "howToVerify": [
+        "Review primary results of the VITAL trial and follow-up meta-analyses",
+        "Consult physician"
+      ]
+    }
+  }
+}

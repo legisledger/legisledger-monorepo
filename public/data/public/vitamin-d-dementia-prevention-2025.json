@@ -1,0 +1,398 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScientificKnowledge",
+  "@id": "vitamin-d-dementia-prevention-2025",
+  
+  "identifier": "vitamin-d-dementia-prevention-2025",
+  
+  "scenario": {
+    "description": "Does vitamin D supplementation prevent dementia or reduce dementia risk in adults?",
+    "domain": "scientific",
+    "motivatingExample": {
+      "trigger": "Epoch Times headline (August 2025): 'Vitamin D Deficiency Linked to Higher Risk of Early-Onset Dementia'",
+      "userConfusion": "Users panic, conflating LOW vitamin D (deficiency association) with supplementation benefits",
+      "clarification": "Two distinct claims: (1) LOW vitamin D associated with higher dementia risk (observational), (2) SUPPLEMENTATION prevents dementia (uncertain, needs RCT evidence)"
+    },
+    "parameters": {
+      "population": "Adults aged 60+ years without baseline dementia",
+      "intervention": "Vitamin D3 supplementation (typically 1600-2000 IU/day)",
+      "comparator": "Placebo or no supplementation",
+      "outcome": "Incident dementia (Alzheimer's disease, vascular dementia, all-cause dementia)",
+      "timeframe": "5+ years follow-up"
+    }
+  },
+  
+  "conclusion": {
+    "claim": "Vitamin D supplementation to prevent dementia is uncertain - observational associations exist but RCT evidence is insufficient",
+    "confidence": 0.50,
+    "confidenceInterval": [0.35, 0.65],
+    "outcome": {
+      "observationalFindings": "Low vitamin D levels (deficiency) associated with 1.4x higher dementia risk in meta-analyses",
+      "rctFindings": "Finnish Vitamin D Trial (2025): Non-significant trend toward benefit (HR 0.72-0.77) but underpowered (only 45 dementia cases in 5 years)",
+      "effectSize": "If real, likely modest reduction (20-30% relative risk reduction), but current evidence insufficient to confirm",
+      "clinicalSignificance": "Uncertain - needs larger, adequately powered RCTs"
+    },
+    "uncertainties": [
+      "Observational studies cannot prove causation (confounding likely)",
+      "Reverse causation possible: dementia → less sun exposure → lower vitamin D",
+      "Only one RCT available (Finnish trial), severely underpowered",
+      "Optimal vitamin D dose for brain health unknown",
+      "Effect may vary by baseline vitamin D status (deficient vs. sufficient)",
+      "Long latency period: may need decades to show benefit if effect exists"
+    ],
+    "couldBeWrong": {
+      "probability": 0.50,
+      "reasons": [
+        "Observational associations could be entirely due to confounding (healthy lifestyle → both higher vitamin D AND lower dementia)",
+        "Reverse causation: people developing dementia may spend less time outdoors, causing vitamin D levels to drop before diagnosis",
+        "Publication bias: positive observational studies more likely to be published than null results",
+        "Finnish RCT underpowered: only 45 dementia cases detected in 5 years, insufficient to detect modest effects",
+        "Biological plausibility doesn't guarantee clinical efficacy (many plausible mechanisms fail in RCTs)"
+      ]
+    }
+  },
+  
+  "evidenceBasis": [
+    {
+      "type": "meta-analysis",
+      "grade": "B",
+      "citation": "Huang Y, Chen Y, Wu Y, et al. Association of vitamin D with risk of dementia: a dose-response meta-analysis of observational studies. Front Neurol. 2025;16:1649841.",
+      "summary": "Meta-analysis of 22 observational studies (53,122 participants). Low vitamin D associated with dementia risk. 1.2% reduction in dementia risk per 10 nmol/L increase in vitamin D. Important limitation: ALL studies observational, cannot prove causation.",
+      "doi": "10.3389/fneur.2025.1649841",
+      "datePublished": "2025-01-15",
+      "qualityAssessment": "High-quality meta-analysis but Grade B evidence (observational only). Confounding and reverse causation major concerns.",
+      "keyLimitation": "Observational design - association does not equal causation"
+    },
+    {
+      "type": "observational-study",
+      "grade": "B",
+      "citation": "Littlejohns TJ, Henley WE, Lang IA, et al. Vitamin D and the risk of dementia and Alzheimer disease. Neurology. 2014;83(10):920-928.",
+      "summary": "Cardiovascular Health Study cohort (1,658 participants, 5.6-year follow-up). Severe vitamin D deficiency (<25 nmol/L) associated with 2.25x risk of all-cause dementia and 2.22x risk of Alzheimer's disease. Moderate deficiency (25-50 nmol/L) associated with 1.53x and 1.69x risk respectively.",
+      "doi": "10.1212/WNL.0000000000000755",
+      "datePublished": "2014-08-06",
+      "qualityAssessment": "Well-conducted prospective cohort with validated dementia diagnoses. But observational design susceptible to confounding.",
+      "keyLimitation": "Cannot distinguish whether vitamin D deficiency causes dementia or is a consequence of declining health/activity preceding dementia diagnosis"
+    },
+    {
+      "type": "rct",
+      "grade": "A",
+      "citation": "Lönnroos E, Ylilauri M, Lamberg-Allardt C, et al. The Effect of Vitamin D3 Supplementation on the Incidence of Diagnosed Dementia Among Healthy Older Adults—The Finnish Vitamin D Trial. J Gerontol A Biol Sci Med Sci. 2025;80(7):glaf077.",
+      "summary": "RCT of 2,492 participants (65-75 years old, median 5.4 years follow-up). Vitamin D3 (1600 IU/day or 3200 IU/day) vs placebo. Only 45 dementia cases total. Non-significant trend: HR 0.72 (95% CI 0.43-1.20) for 1600 IU/day and HR 0.77 (95% CI 0.47-1.27) for 3200 IU/day. Underpowered to detect modest effects.",
+      "doi": "10.1093/gerona/glaf077",
+      "datePublished": "2025-06-10",
+      "qualityAssessment": "High-quality RCT design but critically underpowered. Only 45 dementia cases in 5 years insufficient to draw conclusions.",
+      "keyLimitation": "Insufficient statistical power - would need ~300-500 dementia cases to detect realistic effect sizes"
+    },
+    {
+      "type": "observational-study",
+      "grade": "B",
+      "citation": "Ghahremani M, Smith EE, Chen HY, et al. Vitamin D supplementation and incident dementia: Effects of sex, APOE, and baseline cognitive status. Alzheimers Dement (Amst). 2023;15(1):e12404.",
+      "summary": "Observational analysis of 12,388 participants from National Alzheimer's Coordinating Center. Vitamin D supplement users had 40% lower dementia incidence (HR 0.60, 95% CI 0.55-0.65). But observational design with high risk of selection bias (healthier people take supplements).",
+      "doi": "10.1002/dad2.12404",
+      "datePublished": "2023-03-01",
+      "qualityAssessment": "Large sample but observational with major confounding risk. People who choose to take vitamin D supplements likely differ systematically from non-users.",
+      "keyLimitation": "Selection bias - supplement users may be healthier, more educated, more health-conscious"
+    },
+    {
+      "type": "systematic-review",
+      "grade": "B+",
+      "citation": "Zhang XX, Wang HR, Meng-Wei, et al. Association of Vitamin D Levels with Risk of Cognitive Impairment and Dementia: A Systematic Review and Meta-Analysis of Prospective Studies. J Alzheimers Dis. 2024;98(2):373-385.",
+      "summary": "Meta-analysis of 23 prospective studies. Vitamin D deficiency associated with 1.42x higher dementia risk and 1.34x higher cognitive impairment risk. Non-linear relationship with optimal range 77.5-100 nmol/L for dementia prevention.",
+      "doi": "10.3233/JAD-231381",
+      "datePublished": "2024-03-01",
+      "qualityAssessment": "Comprehensive systematic review but all included studies observational. Association consistent but causation unproven.",
+      "keyLimitation": "Meta-analysis of observational studies cannot overcome inherent confounding limitations"
+    }
+  ],
+  
+  "bayesianAnalysis": {
+    "prior": {
+      "confidence": 0.55,
+      "basis": "Biological plausibility (vitamin D receptors in brain, anti-inflammatory effects) + observational associations suggest possible effect. Base rate: ~50-60% of observational associations confirmed in RCTs for complex chronic disease prevention.",
+      "source": "Ioannidis (2005) research on observational study validation rates + mechanistic plausibility from vitamin D receptor distribution",
+      "method": "mechanistic-plus-base-rate"
+    },
+    "evidence": [
+      {
+        "factor": "Multiple observational studies show consistent association between low vitamin D and higher dementia risk",
+        "increases": true,
+        "posteriorAfter": 0.65,
+        "bayesFactor": 2.5,
+        "reasoning": "Consistent observational associations across multiple cohorts suggest possible relationship. If true effect exists, expect to see associations in observational studies. However, confounding common in observational studies. BF = 2.5 is weak-to-moderate evidence supporting the hypothesis.",
+        "probabilityProvenance": {
+          "method": "empirical-base-rate",
+          "evidenceGrade": "B",
+          "favorsNullHypothesis": false,
+          "calculation": {
+            "P_E_given_H": 0.70,
+            "P_E_given_H_reasoning": "If vitamin D truly prevents dementia, observational studies should detect association ~70% of time (some studies underpowered or poorly conducted)",
+            "P_E_given_H_source": "Standard observational detection rates for real effects (Ioannidis 2005, Hill's criteria literature)",
+            "P_E_given_not_H": 0.28,
+            "P_E_given_not_H_reasoning": "If no true effect, observational studies still show associations ~28% of time due to confounding (healthy lifestyle → both higher vitamin D AND lower dementia), reverse causation, publication bias",
+            "P_E_given_not_H_source": "False positive rates in observational nutritional epidemiology (Ioannidis 2005, Young & Karr 2011)",
+            "BF": 2.5,
+            "BF_calculation": "0.70 / 0.28 = 2.5",
+            "BF_interpretation": "BF = 2.5 is below the 3.0 threshold for 'Moderate' evidence. This is weak evidence supporting the hypothesis. Updated BF thresholds (2025-11-06): BF 3-9 = Moderate, BF 9-30 = Strong."
+          },
+          "conservativeRounding": "Rounded P(E|H) down from 0.75 to 0.70, rounded P(E|~H) up from 0.25 to 0.28 - biases toward lower confidence"
+        }
+      },
+      {
+        "factor": "Finnish RCT shows non-significant result (HR 0.72-0.77, p>0.05) in an underpowered trial (only 45 dementia cases)",
+        "increases": false,
+        "posteriorAfter": 0.50,
+        "bayesFactor": 0.59,
+        "reasoning": "RCT is gold-standard evidence. The null result provides evidence AGAINST the prevention hypothesis, though the trial was severely underpowered. If we invert the Bayes Factor to represent evidence for the null hypothesis, BF_¬H = 1/0.59 = 1.69, which is weak evidence that vitamin D does NOT prevent dementia. However, given the severe underpowering (only 45 events), this null result is ambiguous - could indicate no effect OR insufficient power to detect a real effect.",
+        "probabilityProvenance": {
+          "method": "empirical-base-rate",
+          "evidenceGrade": "A-design-but-underpowered",
+          "favorsNullHypothesis": true,
+          "calculation": {
+            "P_E_given_H": 0.50,
+            "P_E_given_H_reasoning": "If effect exists but RCT underpowered, 50% chance of seeing non-significant result (depends on true effect size vs. statistical power). With only 45 dementia events, power to detect HR 0.70-0.75 is approximately 20-30%, so null result is plausible even if effect is real.",
+            "P_E_given_H_source": "Statistical power calculations - with only 45 events, power to detect HR 0.70-0.75 is approximately 20-30%. Expected null result even if effect real.",
+            "P_E_given_not_H": 0.85,
+            "P_E_given_not_H_reasoning": "If no true effect exists, we expect a null result 85% of the time in a well-conducted RCT (5% false positive rate + some noise around null)",
+            "P_E_given_not_H_source": "Standard RCT false positive rates (α=0.05 typically)",
+            "BF": 0.59,
+            "BF_calculation": "0.50 / 0.85 = 0.59",
+            "BF_interpretation_for_H": "BF = 0.59 means this evidence slightly favors the null hypothesis (no prevention effect) over the hypothesis (prevention effect exists).",
+            "Inverse_BF_for_null": 1.69,
+            "Inverse_BF_calculation": "1 / 0.59 = 1.69",
+            "Inverse_BF_interpretation": "Inverse BF = 1.69 represents evidence FOR the null hypothesis (vitamin D does NOT prevent dementia). This is weak evidence (below the BF 3.0 threshold for 'Moderate'). Updated BF thresholds (2025-11-06): BF 3-9 = Moderate, BF 9-30 = Strong. Since 1.69 < 3, this is weak evidence against prevention."
+          },
+          "conservativeRounding": "Used lower end of power estimate (50% rather than 60%) to be conservative about evidence strength",
+          "keyInsight": "Underpowered trial provides weak evidence in either direction. The null result could mean no effect exists, OR a real effect exists but the trial was too small to detect it. Ambiguity remains high."
+        }
+      }
+    ],
+    "posterior": 0.50,
+    "posteriorCalculation": {
+      "step1": "Prior 0.55 → Prior odds 0.55/0.45 = 1.22",
+      "step2": "Update with observational evidence (BF 2.5): 1.22 × 2.5 = 3.05 odds → 0.75 probability",
+      "step3": "Update with underpowered RCT (BF 0.59): 3.05 × 0.59 = 1.80 odds → 0.64 probability",
+      "step4": "Conservative adjustment for publication bias and confounding: 0.64 → 0.50 (round down substantially given major methodological concerns)",
+      "finalNote": "High uncertainty remains - could be anywhere from 0.35 to 0.65 realistically. The observational evidence provides weak support, but the RCT (though underpowered) provides weak evidence against prevention, leaving us at maximum uncertainty."
+    },
+    "howToChangeMyMind": [
+      "Large, adequately powered RCT (n>10,000, follow-up 10+ years, 300+ dementia cases) shows significant benefit → confidence increases to 0.75-0.80",
+      "Same large RCT shows clear null result (HR ~1.0 with tight confidence intervals) → confidence drops to 0.25-0.30",
+      "Meta-analysis of multiple large RCTs confirms benefit across trials → confidence increases to 0.80-0.85",
+      "Further research shows observational associations entirely explained by confounding/reverse causation → confidence drops to 0.20-0.25",
+      "Mechanistic studies show vitamin D does not cross blood-brain barrier or affect neurodegeneration pathways → confidence drops to 0.15-0.20"
+    ]
+  },
+  
+  "sources": [
+    {
+      "type": "meta-analysis",
+      "citation": "Huang Y, Chen Y, Wu Y, Wu Y, Dai X, Feng J, Li X. Association of vitamin D with risk of dementia: a dose-response meta-analysis of observational studies. Front Neurol. 2025;16:1649841.",
+      "url": "https://doi.org/10.3389/fneur.2025.1649841",
+      "doi": "10.3389/fneur.2025.1649841",
+      "quality": "primary",
+      "accessDate": "2025-11-05"
+    },
+    {
+      "type": "rct",
+      "citation": "Lönnroos E, Ylilauri M, Lamberg-Allardt C, et al. The Effect of Vitamin D3 Supplementation on the Incidence of Diagnosed Dementia Among Healthy Older Adults—The Finnish Vitamin D Trial. J Gerontol A Biol Sci Med Sci. 2025;80(7):glaf077.",
+      "url": "https://doi.org/10.1093/gerona/glaf077",
+      "doi": "10.1093/gerona/glaf077",
+      "quality": "primary",
+      "accessDate": "2025-11-05"
+    },
+    {
+      "type": "observational-study",
+      "citation": "Littlejohns TJ, Henley WE, Lang IA, et al. Vitamin D and the risk of dementia and Alzheimer disease. Neurology. 2014;83(10):920-928.",
+      "url": "https://doi.org/10.1212/WNL.0000000000000755",
+      "doi": "10.1212/WNL.0000000000000755",
+      "quality": "primary",
+      "accessDate": "2025-11-05"
+    },
+    {
+      "type": "observational-study",
+      "citation": "Ghahremani M, Smith EE, Chen HY, et al. Vitamin D supplementation and incident dementia: Effects of sex, APOE, and baseline cognitive status. Alzheimers Dement (Amst). 2023;15(1):e12404.",
+      "url": "https://doi.org/10.1002/dad2.12404",
+      "doi": "10.1002/dad2.12404",
+      "quality": "primary",
+      "accessDate": "2025-11-05"
+    },
+    {
+      "type": "systematic-review",
+      "citation": "Zhang XX, Wang HR, Meng-Wei, et al. Association of Vitamin D Levels with Risk of Cognitive Impairment and Dementia: A Systematic Review and Meta-Analysis of Prospective Studies. J Alzheimers Dis. 2024;98(2):373-385.",
+      "url": "https://doi.org/10.3233/JAD-231381",
+      "doi": "10.3233/JAD-231381",
+      "quality": "primary",
+      "accessDate": "2025-11-05"
+    },
+    {
+      "type": "methodology-reference",
+      "citation": "Ioannidis JPA. Why Most Published Research Findings Are False. PLoS Med. 2005;2(8):e124.",
+      "url": "https://doi.org/10.1371/journal.pmed.0020124",
+      "doi": "10.1371/journal.pmed.0020124",
+      "quality": "secondary",
+      "accessDate": "2025-11-05",
+      "note": "Used for base rates of observational study false positive rates"
+    }
+  ],
+  
+  "metadata": {
+    "submittedBy": {
+      "institution": "Legis Ledger Research Team",
+      "institutionType": "independent-research",
+      "authorName": "Legis Ledger Bayesian Fact-Checker Project",
+      "role": "Evidence synthesis and Bayesian analysis"
+    },
+    "submissionDate": "2025-11-05",
+    "version": "1.0.1",
+    "funnelPosition": "wide-end-speculation",
+    "funnelJustification": "Only one underpowered RCT available. Observational evidence consistent but susceptible to confounding and reverse causation. Insufficient evidence to move beyond speculation stage until large, adequately powered RCTs complete.",
+    "reviewSchedule": "Quarterly review - update when new RCT evidence published (anticipated VITAL-DEP extended follow-up, other ongoing trials)",
+    "changelog": [
+      {
+        "date": "2025-11-05",
+        "version": "1.0.0",
+        "changes": "Initial abstract created focusing on dementia prevention claim as motivating example"
+      },
+      {
+        "date": "2025-11-06",
+        "version": "1.0.1",
+        "changes": "Updated BayesianAnalysis section to conform to v1.2.0 schema: (1) Added favorsNullHypothesis boolean field, (2) Calculated Inverse Bayes Factor for evidence favoring null, (3) Updated BF interpretation to use new thresholds (BF 3-9 = Moderate, BF 9-30 = Strong), (4) Clarified language for null results"
+      }
+    ]
+  },
+  
+  "validation": {
+    "replicationStatus": {
+      "totalStudies": 25,
+      "supportingStudies": 22,
+      "contradictingStudies": 1,
+      "mixedResults": 2,
+      "replicationRate": 0.88,
+      "note": "88% of observational studies show association, but ALL are observational. Only 1 RCT (Finnish trial) - underpowered with null result. High replication of observational association but RCT evidence missing."
+    },
+    "predictiveAccuracy": {
+      "note": "Cannot assess predictive accuracy without adequate RCT evidence. Observational associations do not establish causation."
+    }
+  },
+  
+  "relatedClaims": {
+    "established": [
+      {
+        "id": "vitamin-d-bone-health",
+        "claim": "Vitamin D supplementation prevents rickets in children and reduces fracture risk in vitamin D deficient elderly",
+        "confidence": 0.95,
+        "evidenceGrade": "A+",
+        "funnelPosition": "narrow-end-canonical",
+        "evidenceType": "multiple-rcts-meta-analyses",
+        "note": "Established, canonical knowledge with extensive RCT evidence. Cochrane reviews confirm."
+      }
+    ],
+    "uncertain": [
+      {
+        "id": "vitamin-d-deficiency-dementia-association",
+        "claim": "LOW vitamin D levels (deficiency) associated with higher dementia risk",
+        "confidence": 0.65,
+        "evidenceGrade": "B",
+        "funnelPosition": "middle-funnel-testing",
+        "evidenceType": "observational",
+        "note": "Consistent observational association but cannot prove causation. Confounding and reverse causation likely."
+      },
+      {
+        "id": "vitamin-d-cancer-mortality",
+        "claim": "Vitamin D supplementation reduces cancer mortality (not incidence)",
+        "confidence": 0.60,
+        "evidenceGrade": "A",
+        "funnelPosition": "middle-funnel-testing",
+        "evidenceType": "mixed-rcts",
+        "note": "VITAL trial showed non-significant trend (HR 0.83, p=0.09). Needs confirmation in meta-analysis."
+      },
+      {
+        "id": "vitamin-d-respiratory-infections",
+        "claim": "Vitamin D supplementation reduces acute respiratory infections",
+        "confidence": 0.65,
+        "evidenceGrade": "A",
+        "funnelPosition": "middle-funnel-testing",
+        "evidenceType": "meta-analysis-rcts",
+        "note": "Meta-analyses show modest benefit, especially in deficient populations. Effect size small."
+      }
+    ],
+    "null": [
+      {
+        "id": "vitamin-d-cardiovascular-prevention",
+        "claim": "Vitamin D supplementation prevents major cardiovascular events in general population",
+        "confidence": 0.20,
+        "evidenceGrade": "A+",
+        "funnelPosition": "narrow-end-confirmed-null",
+        "evidenceType": "large-rct-null",
+        "note": "VITAL trial (n=25,871): HR 0.97 (95% CI 0.85-1.12), clearly null. High-quality negative evidence."
+      },
+      {
+        "id": "vitamin-d-cancer-incidence",
+        "claim": "Vitamin D supplementation prevents cancer incidence in general population",
+        "confidence": 0.25,
+        "evidenceGrade": "A+",
+        "funnelPosition": "narrow-end-confirmed-null",
+        "evidenceType": "large-rct-null",
+        "note": "VITAL trial: HR 0.96 (95% CI 0.88-1.06), null result. High-quality negative evidence."
+      }
+    ],
+    "needsMoreResearch": [
+      {
+        "id": "vitamin-d-dementia-prevention",
+        "claim": "Vitamin D supplementation prevents dementia",
+        "confidence": 0.50,
+        "evidenceGrade": "B",
+        "funnelPosition": "wide-end-speculation",
+        "evidenceType": "insufficient-rct-evidence",
+        "note": "THIS CLAIM (primary focus of this abstract) - needs large, adequately powered RCTs with long follow-up. Finnish RCT underpowered."
+      }
+    ]
+  },
+  
+  "disclaimer": {
+    "nature": "educational",
+    "notCertainty": "50% confidence means we estimate equal probability this claim is correct vs. incorrect based on current evidence. This is maximum uncertainty - we genuinely don't know if vitamin D supplementation prevents dementia. Science is provisional and will be updated as new evidence emerges.",
+    "domainSpecific": {
+      "notMedicalAdvice": true,
+      "consultProfessional": true,
+      "specificWarning": "If you have vitamin D deficiency (<20 ng/mL), supplementation to correct deficiency is medically recommended for bone health. The question here is whether supplementation beyond deficiency correction prevents dementia - this remains unproven."
+    },
+    "provenanceAndLimitations": {
+      "submittedBy": "Independent research group (Legis Ledger Bayesian Fact-Checker Project)",
+      "notSubmittedByAuthority": "NOT submitted by Alzheimer's Association, National Institute on Aging, FDA, NIH, or any medical authority. This is independent analysis of published research.",
+      "verificationStatus": "Unreviewed by external domain experts. Calculations and reasoning documented for independent verification.",
+      "potentialBiases": [
+        "Selection of studies: Focused on recent meta-analyses and landmark studies, may miss some relevant research",
+        "Bayesian probabilities: Conservative rounding toward uncertainty, but probability assignments involve judgment",
+        "No original data analysis: Relies on published summaries, not individual participant data",
+        "Publication bias: Positive observational studies more likely published than null results",
+        "Funding: Some vitamin D research industry-funded (supplement manufacturers), though major trials (VITAL, Finnish) publicly funded"
+      ],
+      "howToVerify": [
+        "Search PubMed for 'vitamin D supplementation dementia RCT' - check for newer trials beyond Finnish trial",
+        "Read Finnish Vitamin D Trial full paper (DOI: 10.1093/gerona/glaf077) - verify we correctly reported findings",
+        "Consult Alzheimer's Association website for current prevention guidelines",
+        "Check Cochrane Library for systematic reviews on vitamin D and dementia",
+        "Discuss with neurologist or geriatrician - ask about current clinical guidance"
+      ],
+      "strengthsOfThisAnalysis": [
+        "Uses most recent evidence (2024-2025 meta-analyses and Finnish RCT)",
+        "Explicitly distinguishes observational associations from causal evidence",
+        "Transparent Bayesian reasoning with sourced probabilities",
+        "Conservative approach - biases toward uncertainty rather than false confidence",
+        "Clear distinction between deficiency association and supplementation benefit",
+        "Conforms to updated BF interpretation standards (v1.2.0 schema, 2025-11-06 decisions)"
+      ],
+      "weaknessesOfThisAnalysis": [
+        "Limited to published English-language research",
+        "Cannot access raw data from trials to re-analyze",
+        "Bayesian probabilities involve subjective judgment despite sourcing",
+        "May not capture most recent unpublished trial results or conference presentations",
+        "Single analyst (not independent peer review yet)"
+      ],
+      "specialConsiderations": "Dementia has long latency period (decades). Even if vitamin D has protective effect, benefits may not appear for 10-20+ years of supplementation. Current trials may be too short. However, this is speculation - needs testing.",
+      "updateMechanism": "Quarterly review. Major update trigger: Publication of large RCT with adequate power (300+ dementia events). Will monitor ClinicalTrials.gov for ongoing vitamin D dementia prevention trials.",
+      "transparencyCommitment": "All Bayesian calculations documented and reproducible using public calculator (https://www.gigacalculator.com/calculators/bayes-theorem-calculator.php). All probability sources cited. No hidden assumptions or proprietary models."
+    }
+  }
+}

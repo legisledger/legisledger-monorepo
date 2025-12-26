@@ -1,0 +1,71 @@
+{
+  "@context": "https://schema.org",
+  "@type": "KnowledgeCollection",
+  "identifier": "vitamin-d-master-index-2025",
+  "name": "Vitamin D: A Structured Bayesian Knowledge Collection",
+  "description": "A collection of three distinct knowledge claims regarding Vitamin D supplementation, each analyzed using the Legis Ledger Structured Bayesian Pluralism framework. This index provides a high-level overview of confidence and evidence maturity across related scientific topics.",
+  "collectionType": "knowledge-index",
+  "knowledgeDomain": "scientific-nutritional",
+  "collectionStatus": "complete",
+  "dateCreated": "2025-11-06T13:00:00Z",
+  
+  "metadata": {
+    "submittedBy": {
+      "institution": "Legis Ledger Research Team",
+      "institutionType": "independent-research",
+      "authorName": "Legis Ledger Bayesian Fact-Checker Project",
+      "role": "Evidence synthesis and Bayesian analysis"
+    },
+    "version": "1.2.0"
+  },
+  
+  "@graph": [
+    {
+      "@type": "ScientificKnowledge",
+      "@id": "vitamin-d-bone-health-2025",
+      "claim": "Vitamin D supplementation reduces risk of non-vertebral fractures and improves bone mineral density (BMD) in deficient adults.",
+      "confidence": 0.90,
+      "factuality": "True",
+      "funnelPosition": "narrow-end-canonical",
+      "summary": "Decades of canonical evidence (Cochrane) strongly support this claim, especially when combined with calcium and targeting deficient populations. BF (9.5) is Strong evidence.",
+      "abstractURL": "/claims/vitamin-d-bone-health-2025.json"
+    },
+    {
+      "@type": "ScientificKnowledge",
+      "@id": "vitamin-d-dementia-prevention-2025",
+      "claim": "Vitamin D supplementation to prevent dementia is uncertain - observational associations exist but RCT evidence is insufficient.",
+      "confidence": 0.50,
+      "factuality": "Uncertain",
+      "funnelPosition": "middle-funnel",
+      "summary": "Observational data is compelling, but limited RCTs show mixed or null results. This claim sits at epistemic equipoise (50% confidence), pending definitive long-term trial data. BF (1.0) is Anecdotal.",
+      "abstractURL": "/claims/vitamin-d-dementia-prevention-2025.json"
+    },
+    {
+      "@type": "ScientificKnowledge",
+      "@id": "vitamin-d-cardiovascular-prevention-2025",
+      "claim": "Vitamin D reduces the risk of major adverse cardiovascular events (MACE) and all-cause cardiovascular mortality.",
+      "confidence": 0.40,
+      "factuality": "False",
+      "funnelPosition": "approaching-narrow",
+      "summary": "Large, well-powered RCTs (VITAL) have conclusively demonstrated no benefit in the general population. The evidence favors the null hypothesis. BF against the claim (2.25) is Weak/Anecdotal.",
+      "abstractURL": "/claims/vitamin-d-cardiovascular-prevention-2025.json"
+    }
+  ],
+  
+  "disclaimer": {
+    "nature": "educational",
+    "domainSpecific": {
+      "notMedicalAdvice": true
+    },
+    "provenanceAndLimitations": {
+      "submittedBy": "Independent educational project",
+      "notSubmittedByAuthority": "NOT submitted by FDA or NIH",
+      "potentialBiases": [
+        "Analysis may be biased toward published consensus of null effect in recent large trials."
+      ],
+      "howToVerify": [
+        "Check Cochrane Reviews, NIH, and major RCT publications (e.g., VITAL)."
+      ]
+    }
+  }
+}

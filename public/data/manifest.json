@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "updated": "2024-12-26",
+  "claims": [
+    {
+      "id": "creatine-lbm-2025",
+      "title": "Creatine increases lean body mass",
+      "confidence": 0.90,
+      "grade": "A+",
+      "domain": "health",
+      "position": "V3",
+      "file": "data/public/creatine-lbm-resistance-training-2025.json"
+    },
+    {
+      "id": "minimum-wage-employment-2025",
+      "title": "Minimum wage reduces employment",
+      "confidence": 0.60,
+      "grade": "B",
+      "domain": "policy",
+      "position": "V2",
+      "file": "data/public/minimum-wage-employment-effects-2025.json"
+    },
+    {
+      "id": "minimum-wage-poverty-2025",
+      "title": "Minimum wage reduces poverty",
+      "confidence": 0.60,
+      "grade": "B",
+      "domain": "policy",
+      "position": "V2",
+      "file": "data/public/minimum-wage-poverty-reduction-2025.json"
+    }
+  ]
+}
