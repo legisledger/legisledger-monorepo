@@ -1,0 +1,20 @@
+{
+  "buildCommand": "echo 'Static site'",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "www.legisledger.com"}],
+      "destination": "https://demo.legisledger.com",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "legisledger.com"}],
+      "destination": "https://demo.legisledger.com",
+      "permanent": true
+    }
+  ]
+}
