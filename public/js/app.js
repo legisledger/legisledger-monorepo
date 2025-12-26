@@ -3,6 +3,7 @@
 
 let allClaims = [];
 let currentThreshold = 0.70;
+let funnel = null;
 
 // Initialize app
 async function init() {
@@ -17,6 +18,10 @@ async function init() {
         // Update total count
         document.getElementById('total-count').textContent = allClaims.length;
         
+        // Create funnel
+        funnel = new Funnel('#funnel-container', allClaims);
+        funnel.draw();
+
         // Set up slider
         setupSlider();
         
@@ -40,7 +45,12 @@ function setupSlider() {
         const threshold = parseInt(e.target.value);
         currentThreshold = threshold / 100;
         valueDisplay.textContent = threshold + '%';
+
+        // Update both funnel and list
         filterAndRender(currentThreshold);
+        if (funnel) {
+            funnel.filterByThreshold(currentThreshold);
+        }
     });
 }
 
