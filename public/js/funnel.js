@@ -9,6 +9,7 @@ class Funnel {
         this.height = 600;
         this.svg = null;
         this.currentThreshold = 0.70;
+        this.tooltip = null;
     }
     
     draw() {
@@ -92,7 +93,14 @@ class Funnel {
     }
     
     drawClaims() {
-        // ✓ Always draw ALL claims, use opacity for filtering
+        // Create tooltip element if it doesn't exist
+        if (!this.tooltip) {
+            this.tooltip = document.createElement('div');
+            this.tooltip.className = 'custom-tooltip';
+            document.body.appendChild(this.tooltip);
+        }
+        
+        // Always draw ALL claims, use opacity for filtering
         this.allClaims.forEach((claim, index) => {
             const position = this.getClaimPosition(claim.confidence);
             
@@ -107,20 +115,33 @@ class Funnel {
             circle.classList.add('claim-dot');
             circle.dataset.claimId = claim.id;
             
-            // ✓ Set opacity based on threshold (visible vs faded)
+            // Set opacity based on threshold (visible vs faded)
             const isVisible = claim.confidence >= this.currentThreshold;
             circle.style.opacity = isVisible ? '1' : '0.2';
             circle.style.cursor = isVisible ? 'pointer' : 'default';
             
             // Add transition for smooth filtering
-            circle.style.transition = 'opacity 0.3s ease';
+            circle.style.transition = 'opacity 0.3s ease, r 0.2s ease, stroke-width 0.2s ease';
             
-            // Add hover tooltip
+            // Add native SVG tooltip (fallback for accessibility)
             const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
             title.textContent = `${claim.title} (${Math.round(claim.confidence * 100)}%)`;
             circle.appendChild(title);
             
-            // ✓ Only make visible claims clickable
+            // Add custom tooltip on hover
+            circle.addEventListener('mouseenter', (e) => {
+                this.showTooltip(claim, e);
+            });
+            
+            circle.addEventListener('mousemove', (e) => {
+                this.updateTooltipPosition(e);
+            });
+            
+            circle.addEventListener('mouseleave', () => {
+                this.hideTooltip();
+            });
+            
+            // Only make visible claims clickable
             if (isVisible) {
                 circle.addEventListener('click', () => {
                     const card = document.querySelector(`[data-claim-id="${claim.id}"]`);
@@ -134,6 +155,32 @@ class Funnel {
             
             this.svg.appendChild(circle);
         });
+    }
+
+    showTooltip(claim, event) {
+        const confidencePercent = Math.round(claim.confidence * 100);
+        const gradeDisplay = claim.grade || 'N/A';
+        
+        this.tooltip.innerHTML = `
+            <strong>${claim.title}</strong>
+            <div>
+                <span class="confidence">${confidencePercent}% confident</span> • 
+                <span class="grade">Grade ${gradeDisplay}</span>
+            </div>
+        `;
+        
+        this.tooltip.classList.add('visible');
+        this.updateTooltipPosition(event);
+    }
+
+    updateTooltipPosition(event) {
+        const offset = 15;
+        this.tooltip.style.left = (event.pageX + offset) + 'px';
+        this.tooltip.style.top = (event.pageY + offset) + 'px';
+    }
+
+    hideTooltip() {
+        this.tooltip.classList.remove('visible');
     }
     
     getClaimPosition(confidence) {
