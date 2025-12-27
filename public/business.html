@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legis Ledger for Institutions - Evidence Infrastructure</title>
+    
+    <!-- ✅ Root-relative paths (leading /) -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <style>
+        /* Business page specific styles */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero .lead {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .problem-section,
+        .solution-section,
+        .features-section,
+        .demo-section,
+        .pricing-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .demo-embed {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+        
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header style="background: white; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <nav style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="text-decoration: none; color: #667eea; font-weight: 600; font-size: 1.5rem;">
+                🗺️ Legis Ledger
+            </a>
+            <div style="display: flex; gap: 2rem;">
+                <a href="/" style="color: #666; text-decoration: none;">Demo</a>
+                <a href="/business.html" style="color: #667eea; text-decoration: none; font-weight: 600;">For Institutions</a>
+                <a href="mailto:founder@legisledger.com" style="color: #666; text-decoration: none;">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Evidence Infrastructure for High-Stakes Decisions</h1>
+        <p class="lead">
+            Validate claims with transparent Bayesian analysis. 
+            Defend to regulators. Automate compliance.
+        </p>
+        <div class="cta-buttons">
+            <a href="mailto:founder@legisledger.com?subject=Institution%20Demo%20Request" class="btn-primary">
+                Request Demo
+            </a>
+            <a href="#demo" class="btn-secondary">
+                See It In Action
+            </a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <h2 class="section-title">The Challenge</h2>
+        <p style="font-size: 1.25rem; color: #666; text-align: center; max-width: 800px; margin: 0 auto;">
+            Your team spends 40+ hours researching each claim. 
+            Competitors move faster with AI, but you can't risk hallucinated citations. 
+            Regulatory compliance demands audit trails you can defend.
+        </p>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section" style="background: #f8f9fa;">
+        <h2 class="section-title">The Solution</h2>
+        <p style="font-size: 1.25rem; color: #666; text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+            Validated evidence analysis with quantified confidence. 
+            Every calculation sourced. Every claim defensible.
+        </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">Built for Institutions</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🎯 API Access</h3>
+                <p>
+                    Integrate validated evidence into your workflow. 
+                    Automate content moderation, compliance checks, and research synthesis.
+                </p>
+                <ul style="margin-top: 1rem; color: #666;">
+                    <li>RESTful API with JSON-LD responses</li>
+                    <li>Real-time confidence updates</li>
+                    <li>Webhook notifications</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📊 Custom Analysis</h3>
+                <p>
+                    Priority topics for your domain. We build abstracts 
+                    for the claims your business needs to evaluate.
+                </p>
+                <ul style="margin-top: 1rem; color: #666;">
+                    <li>2-week turnaround for new topics</li>
+                    <li>Quarterly updates included</li>
+                    <li>Domain-specific evidence grading</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>⚖️ Regulatory Defense</h3>
+                <p>
+                    Transparent Bayesian reasoning with full audit trail. 
+                    Defend claims to regulators with peer-reviewed methodology.
+                </p>
+                <ul style="margin-top: 1rem; color: #666;">
+                    <li>Every probability sourced from research</li>
+                    <li>Peer-reviewed by Bayesian statistician</li>
+                    <li>Conservative confidence estimates</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section" style="background: #f8f9fa;">
+        <h2 class="section-title">Interactive Demo</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: #666;">
+            The Certainty Navigator shows claims positioned by evidence quality. 
+            Adjust the slider to filter by your confidence threshold.
+        </p>
+        
+        <div class="demo-embed">
+            <p style="text-align: center; margin-bottom: 2rem;">
+                <a href="/" class="btn-primary">Try Interactive Demo →</a>
+            </p>
+            <p style="text-align: center; color: #666; font-size: 0.9rem;">
+                See the Certainty Navigator in action with real claims about 
+                creatine, vitamin D, and minimum wage effects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <h2 class="section-title">Institutional Access</h2>
+        <div class="pricing-card">
+            <h3>Custom Pricing</h3>
+            <p class="price">Starting at $50k/year</p>
+            <ul style="text-align: left; margin: 2rem 0; color: #666;">
+                <li>API access for your team</li>
+                <li>Custom topic priorities</li>
+                <li>Quarterly evidence updates</li>
+                <li>Regulatory compliance support</li>
+                <li>Integration assistance</li>
+            </ul>
+            <a href="mailto:founder@legisledger.com?subject=Institution%20Pricing%20Inquiry" class="btn-primary">
+                Request Pricing
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #333; color: white; padding: 3rem 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div>
+                <h4>Legis Ledger</h4>
+                <p style="color: #ccc; margin-top: 0.5rem;">
+                    Knowledge navigation infrastructure for high-stakes decisions
+                </p>
+            </div>
+            
+            <div>
+                <h4>For Institutions</h4>
+                <ul style="list-style: none; padding: 0; margin-top: 0.5rem;">
+                    <li><a href="mailto:founder@legisledger.com" style="color: #ccc; text-decoration: none;">Request Demo</a></li>
+                    <li><a href="/data/manifest.json" style="color: #ccc; text-decoration: none;">API Documentation</a></li>
+                    <li><a href="/" style="color: #ccc; text-decoration: none;">Interactive Demo</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Contact</h4>
+                <p style="color: #ccc; margin-top: 0.5rem;">
+                    <a href="mailto:founder@legisledger.com" style="color: #ccc; text-decoration: none;">
+                        founder@legisledger.com
+                    </a>
+                </p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #555; color: #999;">
+            <p>© 2024 Legis Ledger. Built with epistemic humility.</p>
+        </div>
+    </footer>
+
+    <!-- ✅ Root-relative paths for JS -->
+    <script src="/js/funnel.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
