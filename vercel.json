@@ -15,6 +15,11 @@
       "has": [{"type": "host", "value": "legisledger.com"}],
       "destination": "https://demo.legisledger.com",
       "permanent": true
+    },
+    {
+      "source": "/business",
+      "destination": "/business.html",
+      "permanent": true
     }
   ]
 }
